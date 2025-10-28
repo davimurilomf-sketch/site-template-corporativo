@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site em Manutenção</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        :root {
+            --pulse-speed: 2.5s;
+            --rotation-speed: 6s;
+        }
+
+        body {
+            margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ffffff; background: linear-gradient(135deg, #2c3e50, #4a69bd);
+            display: flex; flex-direction: column; 
+            justify-content: center; align-items: center;
+            min-height: 100vh; text-align: center; padding: 20px 0;
+        }
+        
+        /* Estilo da Logo (no topo, fora da caixa) */
+        .site-logo {
+            max-width: 250px; /* Ajuste o tamanho da sua logo aqui */
+            height: auto; 
+            margin-bottom: 40px; 
+        }
+
+        /* Container principal */
+        .maintenance-container {
+            padding: 40px; background-color: rgba(0, 0, 0, 0.2); border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); max-width: 600px; margin: 0 20px;
+        }
+
+        /* A classe .gear-icon cuida APENAS da APARÊNCIA da engrenagem */
+        .gear-icon {
+            font-size: 80px;
+            color: #eed600; /* Cor amarela */
+            margin-bottom: 25px;
+        }
+
+        /* A classe .anim-spin-and-pulse cuida APENAS da ANIMAÇÃO */
+        .anim-spin-and-pulse {
+            animation: spinAndPulse 4s linear infinite;
+        }
+
+        @keyframes spinAndPulse {
+            0% {
+                transform: rotate(0deg) scale(1);
+            }
+            50% {
+                transform: rotate(180deg) scale(1.1);
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+            }
+            100% {
+                transform: rotate(360deg) scale(1);
+                text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+            }
+        }
+    
+      /* Animação de pulsar para o título */
+        @keyframes textPulse {
+            0% {
+                transform: scale(1);
+                text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+            }
+            50% {
+                transform: scale(1.05);
+                text-shadow: 0 0 15px rgba(9, 198, 223, 0.6);
+            }
+            100% {
+                transform: scale(1);
+                text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+            }
+        }
+
+        /* Aplica o pulso apenas ao texto */
+        h1 {
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            animation: textPulse 2.5s ease-in-out infinite;
+        }
+
+        @keyframes rotateGear {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes pulseEffect {
+            0% { transform: scale(1); text-shadow: 0 0 5px rgba(255, 255, 255, 0.3); }
+            50% { transform: scale(1.03); text-shadow: 0 0 15px rgba(255, 255, 255, 0.5); }
+            100% { transform: scale(1); text-shadow: 0 0 5px rgba(255, 255, 255, 0.3); }
+        }
+        
+        @media (max-width: 600px) {
+            .site-logo { max-width: 200px; margin-bottom: 30px; }
+            h1 { font-size: 2.2em; }
+            p { font-size: 1em; }
+            .gear-icon { font-size: 60px; }
+        }
+    </style>
+</head>
+<body>
+
+    <img src="/img/logo-rodape.png" alt="Logo Minha Empresa" class="site-logo">
+    
+    <div class="maintenance-container">
+        
+        <i class="fas fa-cogs gear-icon anim-spin-and-pulse"></i>
+        
+        <h1>EM MANUTENÇÃO</h1>
+        <p>
+            Estamos realizando algumas melhorias em nosso site para oferecer uma experiência ainda melhor. 
+            Voltaremos em breve!
+        </p>
+        <p>Agradecemos a sua paciência.</p>
+    </div>
+
+</body>
+</html>
