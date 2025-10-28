@@ -237,7 +237,7 @@ footer { background-color: var(--cor-primaria); color: var(--cor-branco); paddin
 .hero {
     color: var(--cor-branco);
     /* IMAGEM PADRÃO VAI SER A DE TELEMÓVEL */
-    background-image: url('imagem/celular.jpg'); 
+    background-image: url('../../imagem/celular.jpg'); 
     background-size: cover;
     background-position: center;
     padding: 80px 0;
@@ -248,7 +248,7 @@ footer { background-color: var(--cor-primaria); color: var(--cor-branco); paddin
 /* 10. MEDIA QUERIES (TABLETS E DESKTOPS) */
 @media (min-width: 768px) {
     .hero {
-        background-image: url('imagem/mulher.jpg');
+        background-image: url('../../imagem/mulher.jpg');
     }
     
 }
